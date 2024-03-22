@@ -10,13 +10,11 @@
  Tags:         two-columns, right-sidebar, responsive-layout
  Text Domain:  pinkgallica2024
 */
+
 /* SETUP */
 *, *::before, *::after {box-sizing: border-box;}
-
 * {margin: 0;}
-
 html, body {height: 100%;}
-
 :root {
     --bg-color: rgb(123, 97, 85);
     --wrapper-bg-color: rgb(209, 200, 189);
@@ -73,7 +71,8 @@ img, picture, video, canvas, svg {
 .featured-media {
     width: 100%;
     border-radius: .2rem;
-}
+    /* object-fit: cover; TEEEEEEEEEEEST plus add width and height*/
+} 
 ul.img-container {
     display: flex;
     justify-content: space-around;
