@@ -1,0 +1,479 @@
+/*
+ Theme Name:   Pink Gallica 2024
+ Theme URI:    https://pinkgallica.com
+ Description:  Custom Theme
+ Author:       Mishi
+ Author URI:   https://pinkgallica.com
+ Version:      3.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         two-columns, right-sidebar, responsive-layout
+ Text Domain:  pinkgallica2024
+*/
+/* SETUP */
+*, *::before, *::after {box-sizing: border-box;}
+
+* {margin: 0;}
+
+html, body {height: 100%;}
+
+:root {
+    --bg-color: rgb(123, 97, 85);
+    --wrapper-bg-color: rgb(209, 200, 189);
+    --font-color: #35252e;
+    --i-color: rgb(222, 205, 195);
+    --b-color: rgb(91, 16, 16);
+    --link-color: rgb(50, 84, 120);
+    --link-hover-color: rgb(13, 35, 58);
+    --nav-hover-color: rgb(31, 28, 28);
+    --nav-bg-color: rgba(60, 40, 45, 0.5);
+    --nav-color: rgb(255, 234, 215);
+    --tag-color: rgb(180, 149, 132);
+    --em-color: #c03131;
+    --em-bg-color: #faf6f6;
+    --kbd-color: white;
+    --blockquote-bg-color: #ab9d93;
+    --alt-blockquote-color: white;
+    --alt-blockquote-bg-color: rgb(47, 94, 75);
+    --alt-kbd-color: white;
+    --alt-kbd-bg-color: #294d43;
+	--alt-tag-color: #294d43;
+    --alt-em-color: white;
+    --alt-em-bg-color: rgb(211, 185, 185);
+    --alt-bg-color: #294d43;
+    --alt-bg-color2: #749b90;
+    --alt-font-color: rgb(35, 32, 30);
+    --alt-i-color: #29634b;
+    --alt-b-color: rgb(130, 6, 20);
+    --alt-link-color:  rgb(238, 229, 162);
+    --alt-nav-bg-color: rgba(19, 134, 120, 0.5);
+    --alt-nav-color: rgb(238, 229, 162);
+  }
+
+body {
+    background: url(https://pinkgallica.com/wp-content/themes/PinkGallica2024/img/glitter.gif), var(--bg-color);
+    -webkit-font-smoothing: antialiased;
+    color: var(--font-color);
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    text-align: justify;
+}
+
+/* IMAGES */
+img, picture, video, canvas, svg {
+    max-width: 100%;
+}
+.aligncenter>figcaption {
+	text-align: center;
+}
+.responsive {
+    max-width: 100%;
+    height: auto;
+}
+.featured-media {
+    width: 100%;
+    border-radius: .2rem;
+}
+ul.img-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+}
+ul.img-container li {
+	list-style: none;
+	padding: 1rem;
+}
+
+/* YouTube */
+	.youtube-video {
+	  aspect-ratio: 16 / 9;
+	  width: 100%;
+}
+
+/* FONT */
+b, strong {
+    color: var(--b-color);
+}
+.fa, .fa-regular, .fa-solid, .alt-mode nav .fa, .alt-mode .fa-regular, .alt-mode .fa-solid {
+    background-color: transparent;
+}
+nav .fa {
+    color: var(--nav-color);
+}
+nav .fa-solid, .alt-mode nav .fa-solid {
+	color: white;
+}
+.alt-mode .fa-solid,  .alt-mode .fa-regular{
+    color: var(--alt-font-color);
+}
+.alt-mode .fa-comment  {
+    color: var(--alt-link-color);
+}
+em, i {
+	color: var(--font-color);
+    background-color: var(--i-color);
+    border-radius: .2rem;
+}
+kbd {
+    background-color: rgb(233, 226, 226);
+    border: 1px solid #877e7e;
+    padding: 0 .1rem;
+    border-radius: .25rem;
+}
+blockquote {
+    max-width: 800px;
+    padding: .25rem 1rem;
+    border-radius: 5px;
+    background-color: var(--blockquote-bg-color);
+    color: black;
+    border: 1px solid #6a6565;
+}
+blockquote p::before {
+    content: '\201C';
+}
+blockquote p::after {
+    content: '\201D';
+}
+blockquote footer {
+    font-size: .75rem;
+    padding-bottom: 1rem;
+}
+.comments-link {
+    font-weight: bold;
+}
+aside h1 {
+    margin-top: .25rem;
+}
+.small-text {
+    font-size: .75rem;
+    margin-top: .5rem;
+}
+::selection {
+    color: rgb(36, 32, 33);
+    background: rgb(244, 234, 234);
+}
+h1, h2, h3, h4, h5, h6 {
+        font-family: "Sarabun", sans-serif;
+        font-style: italic;
+}
+h1, h2 {
+	    font-size: 2rem;
+}
+/* LINKS */
+a:link, a:active, a:visited {
+    color: var(--link-color);
+    text-decoration-line: underline;
+    text-decoration-thickness: .1rem;
+    font-weight: bold;
+}
+.alt-mode a:link, .alt-mode a:active, .alt-mode a:visited {
+    color: var(--alt-link-color);
+}
+a:hover {
+    color: var(--link-hover-color);
+}
+
+.tagged a:link, .tagged a:active, .tagged a:visited {
+    color: rgb(255, 255, 255);
+    text-decoration-line: none;
+    background-color: var(--tag-color);
+    border-radius: .2rem;
+    padding: 0 .25rem;
+    text-decoration-thickness: 2px;
+}
+.tagged a:hover {
+    background-color: rgb(77, 75, 86);
+    border-radius: .2rem;
+}
+
+.alt-mode .tagged a:link, .alt-mode .tagged a:active, .alt-mode .tagged a:visited {
+	background-color: var(--alt-tag-color);
+}
+/* SEARCH */
+.search-field {
+    border-radius: .5rem;
+    border: 1px solid black;
+    width: 135px;
+	margin-right: -.25rem;
+}
+.search-submit {
+    background: none;
+    border: none;
+    border-radius: .5rem;
+}
+
+.wp-element-button {
+    background: none;
+    border-radius: .5rem;
+}
+.wp-block-search__input {
+    border-radius: .5rem;
+}
+/* THEME */
+#toggle-btn {
+    font-size: larger;
+    background: none;
+    border: none;
+}
+.alt-mode {
+    background: url(https://pinkgallica.com/wp-content/themes/PinkGallica2024/img/glitter.gif), var(--alt-bg-color);
+    color: var(--alt-font-color);
+}
+.alt-mode .pretty-wrapper {
+    background: var(--alt-bg-color2);
+	color: black;
+    border: 1px solid #4b4343;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.alt-mode ul.main-nav li a:link, .alt-mode ul.main-nav li a:active, .alt-mode ul.main-nav li a:visited {
+    color: var(--alt-nav-color);
+	text-decoration: none;
+}
+.alt-mode .main-nav {
+    background-color: var(--alt-nav-bg-color);
+}
+.alt-mode ::selection {
+    color: black;
+    background: rgb(213, 206, 77);
+}
+.alt-mode kbd {
+    color: var(--alt-kbd-color);
+    background-color: var(--alt-kbd-bg-color); 
+    border: 1px solid rgb(33, 32, 32);
+}
+.alt-mode blockquote {
+    color: var(--alt-blockquote-color);
+    background-color: var(--alt-blockquote-bg-color);
+    border: 1px solid rgb(33, 32, 32);
+}
+/* NAV */
+/* Hide the links inside the navigation menu (except for logo/home) */
+.topnav #myLinks {
+  
+}
+nav {
+    background: var(--nav-bg-color);
+    border-radius: .15rem;
+    border-bottom: 2px solid rgb(212, 207, 207);
+}
+
+.alt-mode i, .alt-mode em{
+    background-color: var(--alt-i-color);
+    color: whitesmoke;
+}
+.alt-mode b, .alt-mode strong {
+    color: var(--alt-b-color);
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 1rem;
+}
+.hamburger { /*hide the burger button on big screens*/
+    display: none;
+}
+
+ul.main-nav li a:link, ul.main-nav li a:active, ul.main-nav li a:visited {
+    color: var(--nav-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+ul.main-nav li a:hover {
+    color: var(--nav-hover-color);
+}
+.nav-logo {
+    flex-grow: 1;
+    font-size: xx-large;
+    font-family: 'Inter', sans-serif;
+}
+.main-nav input[type=text] {
+    padding: .2rem;
+    border-radius: 1rem;
+    width: 150px;
+  }
+.main-nav .search-container button {
+    padding: 6px;
+    background: none;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+  }
+/* PAGINATION */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+ul.pagination li {
+    list-style: none;
+}
+/* GRID */
+main {
+    grid-area: main;
+}
+section {
+    grid-area: section;
+}
+aside {
+    grid-area: aside;
+    }
+    
+.grid-padding {
+    padding: 0 1rem;
+}
+    
+.grid { /* Mobile First */
+    display: grid;
+    gap: 2rem;
+    margin-top: 1.5rem;
+    grid-template-areas:
+        "main"
+        "section"
+        "aside";
+}
+.grid li {
+    list-style-type: "🖤";
+}  
+.grid-single { /* Page / Single */
+    display: grid;
+    margin-top: 1.5rem;
+    grid-template-areas:
+        "section";
+}
+/* OLD POSTS */
+.oldposts-info p {
+    margin: 0;
+    font-size: small;
+}
+.oldposts-item {
+    width: 31.5%;
+    padding: 5px;
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+    margin: .25rem;
+    position: relative;
+    border-radius: .5rem;
+}
+.oldposts-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.oldposts-item h2 {
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+}
+@media only screen and (max-device-width : 1440px) and (orientation : portrait) {
+    .oldposts-item {
+        width: 46.5%;
+    }
+    }  
+    @media only screen and (max-width : 1024px) {
+    .oldposts-item {
+        width: 46%;
+    }
+    }    
+    @media only screen and (max-width : 768px) {  
+    .oldposts-item {
+        width: 100%;
+    }
+    }
+
+    p {
+        margin: 1rem 0;
+    }
+
+    .main-wrapper {
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 1rem;
+    }
+
+.pretty-wrapper {
+    margin-top: 1.5rem;
+    border: 1px solid #cecece;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: .25rem;
+    background: var(--wrapper-bg-color);
+    padding: 0 1.5rem;
+}
+/* RESPONSIVE IMG */
+
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  .theme-switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+  }
+  .theme-switch input {
+    display: none;
+  }
+
+  /* FOOTER */
+.footer {
+    display: flex;
+    justify-content: center;
+    padding: 3rem 0;
+}
+  @media screen and (min-width:769px){ 
+    .grid {
+        margin-top: -1rem;
+        grid-template-columns: 1fr 3fr;
+        grid-template-areas:
+        "nav nav"
+        "aside main"
+        "aside section"
+        "footer footer";
+    }
+}
+@media screen and (min-width: 769px) { /*show the links on big screen*/
+    .nav-links {
+      display: flex !important;
+      align-items: center;
+      gap: 1rem;
+    }
+	li.flex-img {
+	  justify-content: space-between;	
+	}
+  }
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: block;
+        background: none;
+        border: none;
+        font-size: larger;
+        color: #545454;
+    } 
+		ul.img-container {
+	  flex-wrap: wrap;	
+	}
+    .appearinmobile { /*styling of the hidden links*/
+        display: block;
+        text-align: right;
+        margin-top: 1rem;
+        line-height: 2.5rem;
+    }
+    .main-nav { /*main nav wrapper*/
+        display: block;
+    }
+    .main-nav2 { /*lines up logo text and burger*/
+        display: flex;
+        align-items: center;
+    }
+    .nav-links { /*the hidden parts, display none by default*/
+        display: none;
+    }
+  }
